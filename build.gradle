@@ -1,0 +1,25 @@
+group 'com.bbv'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'application'
+apply plugin: 'java'
+
+mainClassName = 'com.bbv.naivecoin.Main'
+sourceCompatibility = 1.8
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Gradle Quickstart',
+                'Implementation-Version': version,
+                'Main-Class': mainClassName
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
